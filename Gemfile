@@ -7,8 +7,10 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
+gem 'ransack'
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"

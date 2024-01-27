@@ -14,5 +14,9 @@ class Employee < ApplicationRecord
     end
     age
   end
-end
 
+  # Ransackable attributes for the search form
+  def self.ransackable_attributes(auth_object = nil)
+    ["first_name", "last_name", "email", "contact_number", "address", "pincode", "city", "state", "date_of_birth", "date_of_hiring"]
+  end
+end

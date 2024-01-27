@@ -1,7 +1,21 @@
-
 <h1 class="text-center">Employee List</h1>
 <div class="container mt-4 bg-light p-4 rounded shadow-sm">
-  <table class="table table-bordered rounded ">
+  <%= search_form_for @q do |f| %>
+    <div class="mb-3">
+      <%= f.label :first_name_cont, "First Name contains:", class: "form-label" %>
+      <%= f.text_field :first_name_cont, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :email_cont, "Email contains:", class: "form-label" %>
+      <%= f.text_field :email_cont, class: "form-control" %>
+    </div>
+
+
+    <%= f.submit "Search", class: "btn btn-primary" %>
+  <% end %>
+
+  <table class="table table-bordered rounded mt-4">
     <thead>
       <tr>
         <th>Name</th>
@@ -17,14 +31,14 @@
           <td><%= employee.email %></td>
           <td><%= employee.contact_number %></td>
           <td>
-            <%= link_to 'Show', employee, class: 'btn btn-info btn-sm px-3' %>
-            <%= link_to 'Edit', edit_employee_path(employee), class: 'btn btn-primary btn-sm' %>
-            <%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+            <%= link_to "Show", employee, class: "btn btn-info btn-sm px-3" %>
+            <%= link_to "Edit", edit_employee_path(employee), class: "btn btn-primary btn-sm" %>
+            <%= link_to "Delete", employee, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
-  <%= link_to 'New Employee', new_employee_path, class: 'btn btn-success' %>
+  <%= link_to "New Employee", new_employee_path, class: "btn btn-success" %>
 </div>
