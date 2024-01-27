@@ -9,7 +9,7 @@
 #   end
 require "faker"
 
-1000.times do
+500.times do
   Employee.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
