@@ -1,6 +1,9 @@
 <div class="container mt-4 text-center bg-light p-4 rounded shadow-lg">
-<h1 class="display-4 text-primary font-bold">User Management</h1>
-<p class="lead text-muted">
-Welcome to the user management application.
-</p>
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <h1 class="text-capitalize"><%= @welcome_message %></h1>
+      <p lead text-muted>Explore our employee management system and manage your workforce efficiently.</p>
+      <%= link_to 'View Employees', employees_path, class: 'btn btn-primary mt-3' %>
+    </div>
+  </div>
 </div>

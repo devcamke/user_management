@@ -1,2 +1,8 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+.hover:hover {
+    border-color: #4d94d3; /* Change the border color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow on hover */
+    /* Add any other styles you want for the hover effect */
+  }
