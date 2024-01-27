@@ -18,6 +18,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 end
 
 group :development do
